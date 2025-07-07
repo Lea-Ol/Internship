@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MeetingRoomAPI.Models
 {
+    [Table("Meetings")]
     public class Meeting
     {
+        [Key]
         public int MeetingId { get; set; }
         public int BookingId { get; set; }
         public string Title { get; set; }

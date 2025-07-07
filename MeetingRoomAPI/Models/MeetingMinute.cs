@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MeetingRoomAPI.Models
 {
+    [Table("MeetingMinutes")]
     public class MeetingMinute
     {
+        [Key]
         public int MinuteId { get; set; }
         public int MeetingId { get; set; }
         public int CreatedByUserId { get; set; }

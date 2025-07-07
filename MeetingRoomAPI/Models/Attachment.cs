@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MeetingRoomAPI.Models
 {
+    [Table("Attachments")]
     public class Attachment
     {
+        [Key]
         public int AttachmentId { get; set; }
         public int MeetingId { get; set; }
         public string FileName { get; set; }

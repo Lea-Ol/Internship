@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MeetingRoomAPI.Models
 {
+    [Table("ActionItems")]
     public class ActionItem
     {
+        [Key]
         public int ActionId { get; set; }
         public int MinuteId { get; set; }
         public int AssignedToUserId { get; set; }
